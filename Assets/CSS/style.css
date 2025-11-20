@@ -47,20 +47,25 @@ body {
 /* largeur de 1160px*/
 body main{
     display: flex;
+    justify-content: center;
     width: 1160px; 
     background-color: white;
     /* 2. Centrer le bloc horizontalement */
-    margin-left: 0;
+    margin-left: auto;
     margin-right: auto;
-    margin-top: 0;
 }
 
-body main section { 
+body main section  { 
     display: flex;
     flex-direction: row; 
     padding: 20px;
 }
 
+body main section ul li{
+    color: #000000;
+}
+
+/* CÔTE GAUCHE */
 body main aside { 
     width: 290px; 
     /* Met l'aside à gauche */
@@ -68,9 +73,14 @@ body main aside {
     padding: 20px;
     background-color: #eef1f2; 
 }
+
+/* Texte en noir */
 aside section ul li{
     color: #000000;
 }
+
+
+/*   EN - TÊTE   */
 body header{
     background-color: #17abb3 ;
     padding: 20px;
@@ -102,6 +112,7 @@ body header ul li a {
     margin: 0 15px;
 }
 
+/* PIED DE PAGE */
 body footer {
     text-align: center;
     font-size: 10px;
