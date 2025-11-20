@@ -73,7 +73,7 @@ body header{
     background-color: #17abb3 ;
     padding: 20px;
     margin-bottom: 0;
-    height: 350px;
+    height: 250px;
 }
 
 body header > img{
@@ -85,10 +85,19 @@ body header > img{
     float: left;
 }
 body header h1, h2, ul {
-    font-weight: 700;
-    justify-content: space-between;
     text-align: center;
     color: #FFFFFF;
+}
+
+body header ul li {
+    display: inline-block;
+    text-decoration: none
+}
+
+body header ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 15px;
 }
 
 body footer {
