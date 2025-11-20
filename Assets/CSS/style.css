@@ -61,8 +61,9 @@ body main section  {
     padding: 20px;
 }
 
-body main section ul li{
+body main section ul li {
     color: #000000;
+    text-decoration: none;
 }
 
 /* CÔTE GAUCHE */
@@ -96,7 +97,7 @@ body header > img{
     border-radius: 80%;
     float: left;
 }
-body header h1, h2, ul {
+body .header_text, ul{
     text-align: center;
     color: #FFFFFF;
 }
