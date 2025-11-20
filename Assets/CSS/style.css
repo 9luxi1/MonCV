@@ -36,7 +36,10 @@
 
 *{
     font-family: "Lato","Raleway","sans-serif";
+    font-size: normal;
 }
+
+/* largeur de 1160px -----------------------------------------------------------------------------*/
 
 body {
     margin: 0; 
@@ -44,21 +47,19 @@ body {
     background-color: #f5f5f5; /* Une couleur de fond légère pour visualiser le centrage */
 }
 
-/* largeur de 1160px*/
+
 body main{
     display: flex;
-    justify-content: center;
     width: 1160px; 
     background-color: white;
-    /* 2. Centrer le bloc horizontalement */
+                                 /* Centrer le bloc horizontalement */
     margin-left: auto;
     margin-right: auto;
-}
 
-body main section  { 
-    display: flex;
-    flex-direction: row; 
-    padding: 20px;
+}
+ /* --------------------------------------------------------------------------------------------- */
+body main section h3, ul li time  {
+    color: #17abb3;
 }
 
 body main section ul li {
@@ -66,6 +67,10 @@ body main section ul li {
     text-decoration: none;
 }
 
+/* Enlever le point au debut  des liste */
+ ul{
+    list-style-type: none;
+ }
 /* CÔTE GAUCHE */
 body main aside { 
     width: 290px; 
@@ -121,4 +126,4 @@ body footer {
     background-color: #17abb3 ;
     color: white;
     width: 100%;
-}
+} 
