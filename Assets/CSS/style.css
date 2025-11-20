@@ -68,7 +68,9 @@ body main aside {
     padding: 20px;
     background-color: #eef1f2; 
 }
-
+aside section ul li{
+    color: #000000;
+}
 body header{
     background-color: #17abb3 ;
     padding: 20px;
