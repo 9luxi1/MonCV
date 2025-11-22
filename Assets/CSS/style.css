@@ -55,11 +55,17 @@ body main{
                                  /* Centrer le bloc horizontalement */
     margin-left: auto;
     margin-right: auto;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
  /* --------------------------------------------------------------------------------------------- */
 body main section h3, ul li time  {
     color: #17abb3;
+}
+
+ul li time{
+    float : right;
 }
 
 body main section ul li {
@@ -74,8 +80,8 @@ body main section ul li {
 /* CÔTE GAUCHE */
 body main aside { 
     width: 290px; 
-    /* Met l'aside à gauche */
-    order: -1; 
+    /* Met l'aside à gauche */ 
+    ;
     padding: 20px;
     background-color: #eef1f2; 
 }
