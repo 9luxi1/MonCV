@@ -7,7 +7,7 @@
   src: url("../Fonts/Raleway-Thin.ttf") format("truetype"),
         url("../Fonts/Raleway-Thin_1.otf") format("opentype");
   font-weight: 100;
-  font-style: normal;
+  font-style: thin;
 }
 
 @font-face {
@@ -15,7 +15,7 @@
   src: url("../Fonts/Raleway-Regular.ttf") format("truetype"),
         url("../Fonts/Raleway-Regular_1.otf") format("opentype");
   font-weight: 400;
-  font-style: normal;   
+  font-style: normal;
 }
 
 @font-face {
@@ -31,7 +31,7 @@
   src: url("../Fonts/Raleway-Bold.ttf") format("truetype"),
         url("../Fonts/Raleway-Bold_1.otf") format("opentype");
   font-weight: 700;
-  font-style: normal;
+  font-style: bold;
 }
 
 *{
@@ -39,81 +39,86 @@
     font-size: normal;
 }
 
+em{
+    font-style: italic;
+    font-weight: 400;
+}
+
+li, p strong{
+    font-weight: 400;
+}
+
+#font-normal{
+    font-weight: 400;
+}
+
+/*  dernière ligne de la list stages */
+#bold{
+    font-weight: 700;
+}
+#italic{
+    font-style: italic;
+}
+
 /* largeur de 1160px -----------------------------------------------------------------------------*/
 
 body {
-    margin: 0; 
+    margin: 0;
     padding: 0;
     background-color: #f5f5f5; /* Une couleur de fond légère pour visualiser le centrage */
 }
 
 
 body main{
-    display: flex; /* Utilisé pour aligner aside et .right-side horizontalement */
-    width: 1160px; 
+    display: flex;                /* Utilisé pour aligner aside et .right-side horizontalement */
+    width: 1160px;
     background-color: white;
                                  /* Centrer le bloc horizontalement */
     margin-left: auto;
     margin-right: auto;
-    /* Suppression de flex-direction: column; */
-    /* Suppression de justify-content: space-between; */
+    margin-bottom: 100px;
+    margin-top: 20px;   /* Esthétique du cv */
 }
  /* --------------------------------------------------------------------------------------------- */
+
 body main section h3, ul li time  {
     color: #17abb3;
 }
 
-/* SUPPRESSION DE FLOAT: RIGHT; car nous allons utiliser FLEXBOX sur le li parent */
-/* ul li time{
-    float : right;
-} */
-
 body main section ul li {
     color: #000000;
-    text-decoration: none;
-    /* Utiliser Flexbox pour aligner le contenu et la date sur la même ligne */
     display: flex;
-    justify-content: space-between; /* Pousse les deux côtés aux extrémités */
+    justify-content: space-between;
     margin-bottom: 5px; /* Petit espace entre les lignes de la liste */
 }
 
-/* Enlever le point au debut  des liste */
- ul{
-    list-style-type: none;
-    /* Supprimer l'indentation par défaut de la liste */
-    padding-left: 0;
- }
- 
- /* NOUVELLE RÈGLE POUR LE CÔTÉ DROIT */
+ /* LE CÔTÉ DROIT */
  body main .right-side {
     width: 870px; /* 1160px (total) - 290px (aside) */
-    /* Ajouter la bordure inférieure aux sections à l'intérieur de .right-side
-       et ajouter un padding pour que la bordure ne touche pas le contenu.
-    */
-    padding: 20px 20px 0 20px; /* Padding haut, droit, bas (0), gauche */
+    padding: 20px 20px 0 20px;   /* Padding haut, droit, bas (0), gauche */
  }
 
- /* AJOUTER UNE LIGNE SÉPARATRICE entre les sections (sauf la dernière) */
- body main .right-side section:not(:last-child) {
-    border-bottom: 1px solid #eef1f2; /* Ligne de séparation légère */
+ /* AJOUTER UNE LIGNE SÉPARATRICE entre les sections sauf la dernière */
+ body main .right-side section:not(:last-child), body main aside section:not(:last-child) {
+    border-bottom: 2px solid #e3e3e3; /* Ligne de séparation légère */
     padding-bottom: 20px; /* Espace après la ligne */
     margin-bottom: 20px; /* Espace avant la section suivante */
  }
- 
+
 /* CÔTE GAUCHE */
-body main aside { 
-    width: 290px; 
+body main aside {
+    width: 290px;
     padding: 20px;
-    background-color: #eef1f2; 
+    background-color: #eef1f2;
 }
 
-/* Texte en noir */
+
 aside section ul li{
     color: #000000;
 }
 
 
-/* EN - TÊTE   */
+/* EN-TÊTE   */
 body header{
     background-color: #17abb3 ;
     padding: 20px;
@@ -136,7 +141,6 @@ body .header_text, ul{
 
 body header ul li {
     display: inline-block;
-    text-decoration: none
 }
 
 body header ul li a {
@@ -153,4 +157,73 @@ body footer {
     background-color: #17abb3 ;
     color: white;
     width: 100%;
+}
+
+/*forcer le retour à la ligne entre strong et em */
+body main .right-side .li-content {
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    margin-top: 20px;
+}
+
+#profil_text{
+    text-indent: 25px;
+}
+
+main section{
+    margin-bottom: 90px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+/* Personnalisation des puces de liste dans le aside pour la 3 et 4eme section  */
+body main aside section:nth-last-child(2) ul li,
+body main aside section:last-child ul li {
+    padding-left: 15px; /* Déplace le texte pour laisser l'espace au carré */
+    position: relative; /* nécessaire pour positionner le carré */
+}
+
+body main aside section:nth-last-child(2) ul li:before,
+body main aside section:last-child ul li:before {
+    content: "";
+    position: absolute; /* nécessaire pour possionner le carré */
+    left: 0px;
+    top: 5px;    /* centre face au texte */
+
+    /* Caractère de la puce */
+    width: 8px;
+    height: 8px;
+    background-color: #17abb3;
+}
+
+#bold{
+    position: absolute;
+}
+#italic{
+    position: relative;
+    top: 18px;
+    left: 40px;
+}
+
+/* Système d'étoiles pour les compétences */
+.stars {
+    display: flex;
+    gap: 3px;
+}
+
+.star {
+    width: 14px;
+    height: 14px;
+}
+
+.star.filled::before {
+    content: "★";
+    color: #17abb3;
+    font-size: 16px;
+}
+
+.star.empty::before {
+    content: "☆";
+    color: #17abb3;
+    font-size: 16px;
 }
