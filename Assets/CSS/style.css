@@ -7,7 +7,7 @@
   src: url("../Fonts/Raleway-Thin.ttf") format("truetype"),
         url("../Fonts/Raleway-Thin_1.otf") format("opentype");
   font-weight: 100;
-  font-style: normal;
+  font-style: thin;
 }
 
 @font-face {
@@ -31,12 +31,25 @@
   src: url("../Fonts/Raleway-Bold.ttf") format("truetype"),
         url("../Fonts/Raleway-Bold_1.otf") format("opentype");
   font-weight: 700;
-  font-style: normal;
+  font-style: bold;
 }
 
 *{
     font-family: "Lato","Raleway","sans-serif";
     font-size: normal;
+}
+
+em{
+    font-style: italic;
+    font-weight: 400;
+}
+
+li, p strong{
+    font-weight: 400; 
+}
+
+#font-normal{
+    font-weight: 400;
 }
 
 /* largeur de 1160px -----------------------------------------------------------------------------*/
