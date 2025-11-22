@@ -116,7 +116,7 @@ aside section ul li{
 }
 
 
-/* EN - TÊTE   */
+/* EN-TÊTE   */
 body header{
     background-color: #17abb3 ;
     padding: 20px;
@@ -192,4 +192,13 @@ body main aside section:last-child ul li:before {
     width: 8px;
     height: 8px;
     background-color: #17abb3;
+}
+
+#bold{
+    position: absolute;
+}
+#italic{
+    position: relative;
+    top: 18px;
+    left: 40px;
 }
