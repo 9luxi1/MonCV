@@ -63,26 +63,42 @@ body main section h3, ul li time  {
     color: #17abb3;
 }
 
-ul li time{
+/* SUPPRESSION DE FLOAT: RIGHT; car nous allons utiliser FLEXBOX sur le li parent */
+/* ul li time{
     float : right;
-}
+} */
 
 body main section ul li {
     color: #000000;
     text-decoration: none;
+    /* Utiliser Flexbox pour aligner le contenu et la date sur la même ligne */
+    display: flex;
+    justify-content: space-between; /* Pousse les deux côtés aux extrémités */
+    margin-bottom: 5px; /* Petit espace entre les lignes de la liste */
 }
 
 /* Enlever le point au debut  des liste */
  ul{
     list-style-type: none;
+    /* Supprimer l'indentation par défaut de la liste */
+    padding-left: 0;
  }
  
  /* NOUVELLE RÈGLE POUR LE CÔTÉ DROIT */
  body main .right-side {
     width: 870px; /* 1160px (total) - 290px (aside) */
-    padding: 20px;
+    /* Ajouter la bordure inférieure aux sections à l'intérieur de .right-side
+       et ajouter un padding pour que la bordure ne touche pas le contenu.
+    */
+    padding: 20px 20px 0 20px; /* Padding haut, droit, bas (0), gauche */
  }
- /* FIN DE LA NOUVELLE RÈGLE */
+
+ /* AJOUTER UNE LIGNE SÉPARATRICE entre les sections (sauf la dernière) */
+ body main .right-side section:not(:last-child) {
+    border-bottom: 1px solid #eef1f2; /* Ligne de séparation légère */
+    padding-bottom: 20px; /* Espace après la ligne */
+    margin-bottom: 20px; /* Espace avant la section suivante */
+ }
  
 /* CÔTE GAUCHE */
 body main aside { 
