@@ -49,15 +49,15 @@ body {
 
 
 body main{
-    display: flex;
+    display: flex;                /* Utilisé pour aligner aside et .right-side horizontalement */
     width: 1160px; 
     background-color: white;
                                  /* Centrer le bloc horizontalement */
     margin-left: auto;
     margin-right: auto;
-
 }
  /* --------------------------------------------------------------------------------------------- */
+
 body main section h3, ul li time  {
     color: #17abb3;
 }
@@ -65,17 +65,35 @@ body main section h3, ul li time  {
 body main section ul li {
     color: #000000;
     text-decoration: none;
+    /* Utiliser Flexbox pour aligner le contenu et la date sur la même ligne */
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 5px; /* Petit espace entre les lignes de la liste */
 }
 
 /* Enlever le point au debut  des liste */
  ul{
     list-style-type: none;
+    /* Supprimer l'indentation par défaut de la liste */
+    padding-left: 0;
  }
+ 
+ /* LE CÔTÉ DROIT */
+ body main .right-side {
+    width: 870px; /* 1160px (total) - 290px (aside) */
+    padding: 20px 20px 0 20px;   /* Padding haut, droit, bas (0), gauche */
+ }
+
+ /* AJOUTER UNE LIGNE SÉPARATRICE entre les sections (sauf la dernière) */
+ body main .right-side section:not(:last-child) {
+    border-bottom: 3px solid #e3e3e3; /* Ligne de séparation légère */
+    padding-bottom: 20px; /* Espace après la ligne */
+    margin-bottom: 20px; /* Espace avant la section suivante */
+ }
+ 
 /* CÔTE GAUCHE */
 body main aside { 
     width: 290px; 
-    /* Met l'aside à gauche */
-    order: -1; 
     padding: 20px;
     background-color: #eef1f2; 
 }
@@ -86,7 +104,7 @@ aside section ul li{
 }
 
 
-/*   EN - TÊTE   */
+/* EN - TÊTE   */
 body header{
     background-color: #17abb3 ;
     padding: 20px;
@@ -126,4 +144,4 @@ body footer {
     background-color: #17abb3 ;
     color: white;
     width: 100%;
-} 
+}
