@@ -15,7 +15,7 @@
   src: url("../Fonts/Raleway-Regular.ttf") format("truetype"),
         url("../Fonts/Raleway-Regular_1.otf") format("opentype");
   font-weight: 400;
-  font-style: normal;   
+  font-style: normal;
 }
 
 @font-face {
@@ -45,17 +45,25 @@ em{
 }
 
 li, p strong{
-    font-weight: 400; 
+    font-weight: 400;
 }
 
 #font-normal{
     font-weight: 400;
 }
 
+/*  dernière ligne de la list stages */
+#bold{
+    font-weight: 700;
+}
+#italic{
+    font-style: italic;
+}
+
 /* largeur de 1160px -----------------------------------------------------------------------------*/
 
 body {
-    margin: 0; 
+    margin: 0;
     padding: 0;
     background-color: #f5f5f5; /* Une couleur de fond légère pour visualiser le centrage */
 }
@@ -63,7 +71,7 @@ body {
 
 body main{
     display: flex;                /* Utilisé pour aligner aside et .right-side horizontalement */
-    width: 1160px; 
+    width: 1160px;
     background-color: white;
                                  /* Centrer le bloc horizontalement */
     margin-left: auto;
@@ -78,17 +86,10 @@ body main section h3, ul li time  {
 body main section ul li {
     color: #000000;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin-bottom: 5px; /* Petit espace entre les lignes de la liste */
 }
 
-/* Enlever le point au debut  des liste */
- ul{
-    list-style-type: none;
-    /* Supprimer l'indentation par défaut de la liste */
-    padding-left: 0;
- }
- 
  /* LE CÔTÉ DROIT */
  body main .right-side {
     width: 870px; /* 1160px (total) - 290px (aside) */
@@ -101,12 +102,12 @@ body main section ul li {
     padding-bottom: 20px; /* Espace après la ligne */
     margin-bottom: 20px; /* Espace avant la section suivante */
  }
- 
+
 /* CÔTE GAUCHE */
-body main aside { 
-    width: 290px; 
+body main aside {
+    width: 290px;
     padding: 20px;
-    background-color: #eef1f2; 
+    background-color: #eef1f2;
 }
 
 
@@ -182,13 +183,13 @@ body main aside section:last-child ul li {
 
 body main aside section:nth-last-child(2) ul li:before,
 body main aside section:last-child ul li:before {
-    content: ""; 
+    content: "";
     position: absolute; /* nécessaire pour possionner le carré */
-    left: 0px;  
+    left: 0px;
     top: 5px;    /* centre face au texte */
 
     /* Caractère de la puce */
     width: 8px;
     height: 8px;
-    background-color: #17abb3; 
-} 
+    background-color: #17abb3;
+}
