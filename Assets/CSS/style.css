@@ -76,6 +76,8 @@ body main{
                                  /* Centrer le bloc horizontalement */
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 100px;
+    margin-top: 20px;   /* Esthétique du cv */
 }
  /* --------------------------------------------------------------------------------------------- */
 
@@ -201,4 +203,27 @@ body main aside section:last-child ul li:before {
     position: relative;
     top: 18px;
     left: 40px;
+}
+
+/* Système d'étoiles pour les compétences */
+.stars {
+    display: flex;
+    gap: 3px;
+}
+
+.star {
+    width: 14px;
+    height: 14px;
+}
+
+.star.filled::before {
+    content: "★";
+    color: #17abb3;
+    font-size: 16px;
+}
+
+.star.empty::before {
+    content: "☆";
+    color: #17abb3;
+    font-size: 16px;
 }
