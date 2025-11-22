@@ -145,3 +145,20 @@ body footer {
     color: white;
     width: 100%;
 }
+
+/*forcer le retour à la ligne entre strong et em */
+body main .right-side .li-content {
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    margin-right: 15px; 
+}
+
+#profil_text{
+    text-indent: 25px;
+}
+
+main section{
+    margin-bottom: 90px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
