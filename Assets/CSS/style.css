@@ -60,6 +60,15 @@ li, p strong{
     font-style: italic;
 }
 
+#bold{
+    position: absolute;
+}
+#italic{
+    position: relative;
+    top: 18px;
+    left: 40px;
+}
+
 /* largeur de 1160px -----------------------------------------------------------------------------*/
 
 body {
@@ -122,7 +131,7 @@ aside section ul li{
 body header{
     background-color: #17abb3 ;
     padding: 20px;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     height: 250px;
 }
 
@@ -174,7 +183,7 @@ body main .right-side .li-content {
 main section{
     margin-bottom: 90px;
     margin-top: 30px;
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 /* Personnalisation des puces de liste dans le aside pour la 3 et 4eme section  */
@@ -195,15 +204,6 @@ body main aside section:last-child ul li:before {
     width: 8px;
     height: 8px;
     background-color: #17abb3;
-}
-
-#bold{
-    position: absolute;
-}
-#italic{
-    position: relative;
-    top: 18px;
-    left: 40px;
 }
 
 /* Système d'étoiles pour les compétences */
@@ -227,4 +227,22 @@ body main aside section:last-child ul li:before {
     content: "☆";
     color: #17abb3;
     font-size: 16px;
+}
+
+/* Effets dynamiques*/
+
+.right-side section ul li:hover{
+    border-left: #17abb3 solid 4px;
+    padding-left: 10px; /* Ajoute un petit espace entre le trait et le texte */
+    /* J'ai découvert qu'on avait un effet de sélection avec le déplacement de la date */
+    margin-right: 4px; 
+    background-color: #e3e3e3;
+}
+
+header > img{
+    cursor: zoom-in;
+}
+
+a:hover {
+    opacity: 0.8;
 }
