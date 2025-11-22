@@ -165,9 +165,10 @@ body main .right-side .li-content {
     flex-direction: column; /* Empile les éléments verticalement */
     margin-top: 20px;
 }
-
+ /* Consigne pour le Texte du profil */
 #profil_text{
     text-indent: 25px;
+    text-align: justify;
 }
 
 main section{
